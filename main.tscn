@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwx3xxrghouxo"]
+
+[ext_resource type="PackedScene" uid="uid://bkoyexqolk3y6" path="res://paddle.tscn" id="1_165h6"]
+[ext_resource type="Script" path="res://Main.cs" id="1_rn0e3"]
+[ext_resource type="PackedScene" uid="uid://ctm2k121t270w" path="res://ball.tscn" id="3_vgxep"]
+[ext_resource type="PackedScene" uid="uid://dl6rh7a2neopx" path="res://table.tscn" id="4_47dea"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_rn0e3")
+
+[node name="Table" parent="." instance=ExtResource("4_47dea")]
+
+[node name="Ball" parent="." instance=ExtResource("3_vgxep")]
+position = Vector2(576, 302)
+
+[node name="Player1" parent="." instance=ExtResource("1_165h6")]
+position = Vector2(80, 302)
+
+[node name="Player2" parent="." instance=ExtResource("1_165h6")]
+position = Vector2(1072, 302)
